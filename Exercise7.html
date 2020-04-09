@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xóa phần tử khỏi mảng</title>
+</head>
+<body>
+<p id="ketqua">hiển thị mảng sau khi xóa</p>
+<script>
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    // Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+    // (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+    let board=[];
+    for(let i=0;i<10;i++){
+        board[i]= parseInt(prompt('nhập phần tử thứ '+i+ 'của mảng'));
+    }
+    let v = parseInt(prompt('nhập số V bất kì:'));
+    let index = -1;
+
+    for (let i=0; i<10;i++) {
+        let flag = false;
+        if (v == board[i]) {
+            board.splice(i, 1);
+            board.push(0);
+            index =i;
+            break;
+        }
+    }  document.write(board);
+    if(index== -1){
+        alert('giá trị V không thuộc mảng');
+    }
+
+</script>
+</body>
+</html>

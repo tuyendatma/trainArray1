@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÌm số nguyên có thuộc mảng hay không</title>
+</head>
+<body>
+<input id="sonhap">
+<button id="kiemtra">Kiểm tra</button>
+
+<script>
+
+    let kiemTra = document.getElementById('kiemtra');
+    kiemTra.onclick=function () {
+        let intNumbers =[1,2,3,5,-5,12,11,10,26,4];
+        let soNhap = document.getElementById('sonhap').value;
+        console.log(soNhap);
+        let k= intNumbers.indexOf(parseInt(soNhap));
+        console.log(k);
+        if (k!== -1){
+            document.write('thuộc mảng số nguyên');
+        }else {document.write('không thuộc bảng số nguyên');}
+
+    }
+
+</script>
+</body>
+</html>

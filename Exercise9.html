@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối hai mảng</title>
+</head>
+<body>
+<script>
+    let board1=[];
+    for(let i=0;i<5;i++){
+        board1[i]= parseInt(prompt('nhập phần tử thứ '+i+ 'của mảng 1'));
+    }
+    let board2=[];
+    for(let i=0;i<5;i++){
+        board2[i]= parseInt(prompt('nhập phần tử thứ '+i+ 'của mảng2'));
+    }
+    let board3=[];
+    for(let i=0;i < 10;i++){
+      if(i<5){
+          board3[i]= board1[i];
+      }else if(i>=5){
+          board3 [i]= board2[i-5];
+      }
+    }document.write(board3);
+</script>
+</body>
+</html>

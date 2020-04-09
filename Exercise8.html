@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp giá trị từ lớn đến bé</title>
+</head>
+<body>
+<script>
+    let board=[];
+    for(let i=0;i<5;i++){
+        board[i]= parseInt(prompt('nhập phần tử thứ '+i+ 'của mảng'));
+    }
+    let max = board[0];
+    for (let i = 0 ; i < board.length - 1; i++) {
+        for (let j = i + 1; j < board.length; j++) {
+            if (board[i] < board[j]) {
+                max = board[j];
+                board[j] = board[i];
+                board[i] = max;
+            }
+        }
+    }
+
+
+    for (i=0;i<board.length;i++){
+        document.write(board[i]+',');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let intNumbers =[1,2,3,5,-5,12,11,10,26,4];
+    // let maxNum =intNumbers[0];
+    // for(i=1;i<intNumbers.length;i++){
+    //     if(maxNum<intNumbers[i]){
+    //         maxNum = intNumbers[i];
+    //     }
+    // }document.write(maxNum+'<br>');
+    var maxNum = Math.max.apply(Math, intNumbers);
+    document.write(maxNum+'<br>');
+    let index= intNumbers.indexOf(maxNum);
+    document.write(index);
+</script>
+</body>
+</html>

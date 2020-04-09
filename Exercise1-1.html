@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let intNumbers =[1,2,3,5,-5,12,11,10,26,4];
+    let tong=0;
+    for(let i=0; i<intNumbers.length;i++){
+        if(intNumbers[i]%2 !==0){
+            tong += intNumbers[i];
+        }
+    }document.write('tổng các số lẻ trong mảng là: '+tong);
+
+    //bài 2
+    let soN=Number(prompt("Nhâp độ dài"))
+    let arrayA=[]
+    let i=0;
+    while (i<soN){
+        arrayA[i]=Number(prompt("Nhap mang: "));
+        i++;
+    }
+    document.write(arrayA)
+</script>
+</body>
+</html>
